@@ -6,4 +6,12 @@
 //  Copyright (c) 2015 KNOWTime. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "ShapePointManagedObject.h"
+
+@implementation ShapePointManagedObject
+
+@synthesize longitude;
+@synthesize latitude;
+@synthesize soilSection;
+
+@end

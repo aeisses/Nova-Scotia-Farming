@@ -6,8 +6,14 @@
 //  Copyright (c) 2015 KNOWTime. All rights reserved.
 //
 
-#ifndef NovaScotiaFarming_DataLoader_h
-#define NovaScotiaFarming_DataLoader_h
+#import <Foundation/Foundation.h>
+#import <MapKit/MapKit.h>
+#import <CoreData/CoreData.h>
 
+@interface DataLoader : NSObject
 
-#endif
+- (id)init;
++ (id)sharedInstance;
+- (void)loadGMLData;
+
+@end

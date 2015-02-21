@@ -6,8 +6,14 @@
 //  Copyright (c) 2015 KNOWTime. All rights reserved.
 //
 
-#ifndef NovaScotiaFarming_ShapePointManagedObject_h
-#define NovaScotiaFarming_ShapePointManagedObject_h
+#import <CoreData/CoreData.h>
+#import <Foundation/Foundation.h>
+#import "SoilSectionManagedObject.h"
 
+@interface ShapePointManagedObject : NSManagedObject
 
-#endif
+@property (nonatomic, strong) NSDecimalNumber *longitude;
+@property (nonatomic, strong) NSDecimalNumber *latitude;
+@property (nonatomic, strong) SoilSectionManagedObject *soilSection;
+
+@end

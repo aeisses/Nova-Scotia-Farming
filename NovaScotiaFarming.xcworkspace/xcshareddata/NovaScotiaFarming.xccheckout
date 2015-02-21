@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3A985B66-EDEA-46EE-8444-FBE5CF16731F</string>
+	<string>CF408938-279C-4807-81E6-9B4A004D96A5</string>
 	<key>IDESourceControlProjectName</key>
 	<string>NovaScotiaFarming</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -14,11 +14,11 @@
 		<string>github.com:aeisses/Nova-Scotia-Farming.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>NovaScotiaFarming/NovaScotiaFarming.xcodeproj</string>
+	<string>NovaScotiaFarming.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>7E0C5A9C9DDE2FBA28EC9C0A65FBD09D7465FBC9</key>
-		<string>../../..</string>
+		<string>..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:aeisses/Nova-Scotia-Farming.git</string>

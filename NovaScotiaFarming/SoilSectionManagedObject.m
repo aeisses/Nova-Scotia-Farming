@@ -6,4 +6,17 @@
 //  Copyright (c) 2015 KNOWTime. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "SoilSectionManagedObject.h"
+
+@implementation SoilSectionManagedObject
+
+@synthesize waterarea;
+@synthesize soilid;
+@synthesize objectid;
+@synthesize landarea;
+@synthesize shapelength;
+@synthesize shapearea;
+@synthesize mapunit;
+@synthesize shapePoints;
+
+@end

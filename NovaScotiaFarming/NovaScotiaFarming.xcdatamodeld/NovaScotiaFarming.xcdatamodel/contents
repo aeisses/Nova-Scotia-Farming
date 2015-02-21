@@ -15,8 +15,15 @@
         <attribute name="waterarea" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <relationship name="shapePoints" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShapePoint" inverseName="soilSection" inverseEntity="ShapePoint" syncable="YES"/>
     </entity>
+    <entity name="SoilType" syncable="YES">
+        <attribute name="geoid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="objectid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <attribute name="soilname" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="soiltype" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="SoilSection" positionX="-63" positionY="-18" width="128" height="163"/>
         <element name="ShapePoint" positionX="187" positionY="18" width="128" height="88"/>
+        <element name="SoilType" positionX="81" positionY="63" width="128" height="105"/>
     </elements>
 </model>

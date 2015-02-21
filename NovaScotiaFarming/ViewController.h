@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NovaScotiaMapView.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <MKMapViewDelegate>
 
+@property (nonatomic, strong) IBOutlet NovaScotiaMapView *nsMapView;
 
 @end
 

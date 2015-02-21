@@ -22,6 +22,11 @@
 		0465751D1A980E770087357C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0465751C1A980E770087357C /* CoreData.framework */; };
 		046575201A9812220087357C /* SoilSectionManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465751F1A9812220087357C /* SoilSectionManagedObject.m */; };
 		046575231A9818080087357C /* ShapePointManagedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575221A9818080087357C /* ShapePointManagedObjects.m */; };
+		046575291A98BC7F0087357C /* PED_NS_DTL_CMP.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575251A98BC7F0087357C /* PED_NS_DTL_CMP.csv */; };
+		0465752A1A98BC7F0087357C /* PED_NS_DTL_50K.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575261A98BC7F0087357C /* PED_NS_DTL_50K.csv */; };
+		0465752B1A98BC7F0087357C /* PED_NS_DTL_SLF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575271A98BC7F0087357C /* PED_NS_DTL_SLF.csv */; };
+		0465752C1A98BC7F0087357C /* PED_NS_DTL_SNF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575281A98BC7F0087357C /* PED_NS_DTL_SNF.csv */; };
+		0465752E1A98BFD80087357C /* NovaScotiaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465752D1A98BFD80087357C /* NovaScotiaMapView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +65,12 @@
 		0465751F1A9812220087357C /* SoilSectionManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilSectionManagedObject.m; sourceTree = "<group>"; };
 		046575211A9812A10087357C /* ShapePointManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapePointManagedObject.h; sourceTree = "<group>"; };
 		046575221A9818080087357C /* ShapePointManagedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapePointManagedObjects.m; sourceTree = "<group>"; };
+		046575251A98BC7F0087357C /* PED_NS_DTL_CMP.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_CMP.csv; path = ../../../Downloads/ns/PED_NS_DTL_CMP.csv; sourceTree = "<group>"; };
+		046575261A98BC7F0087357C /* PED_NS_DTL_50K.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_50K.csv; path = ../../../Downloads/ns/PED_NS_DTL_50K.csv; sourceTree = "<group>"; };
+		046575271A98BC7F0087357C /* PED_NS_DTL_SLF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_SLF.csv; path = ../../../Downloads/ns/PED_NS_DTL_SLF.csv; sourceTree = "<group>"; };
+		046575281A98BC7F0087357C /* PED_NS_DTL_SNF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_SNF.csv; path = ../../../Downloads/ns/PED_NS_DTL_SNF.csv; sourceTree = "<group>"; };
+		0465752D1A98BFD80087357C /* NovaScotiaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovaScotiaMapView.m; sourceTree = "<group>"; };
+		0465752F1A98BFEB0087357C /* NovaScotiaMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NovaScotiaMapView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +116,13 @@
 		046574E81A97FA990087357C /* NovaScotiaFarming */ = {
 			isa = PBXGroup;
 			children = (
+				046575241A98BC4A0087357C /* DataFiles */,
 				0465751E1A9811250087357C /* SoilSectionManagedObject.h */,
 				0465751F1A9812220087357C /* SoilSectionManagedObject.m */,
 				046575211A9812A10087357C /* ShapePointManagedObject.h */,
 				046575221A9818080087357C /* ShapePointManagedObjects.m */,
-				046575151A9800DF0087357C /* PED_NS_DTL_50K.gml */,
+				0465752F1A98BFEB0087357C /* NovaScotiaMapView.h */,
+				0465752D1A98BFD80087357C /* NovaScotiaMapView.m */,
 				046575141A97FF6B0087357C /* DataLoader.h */,
 				046575121A97FF570087357C /* DataLoader.m */,
 				046575191A98028D0087357C /* DDFileReader.h */,
@@ -151,6 +164,18 @@
 				046575071A97FA990087357C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		046575241A98BC4A0087357C /* DataFiles */ = {
+			isa = PBXGroup;
+			children = (
+				046575251A98BC7F0087357C /* PED_NS_DTL_CMP.csv */,
+				046575261A98BC7F0087357C /* PED_NS_DTL_50K.csv */,
+				046575271A98BC7F0087357C /* PED_NS_DTL_SLF.csv */,
+				046575281A98BC7F0087357C /* PED_NS_DTL_SNF.csv */,
+				046575151A9800DF0087357C /* PED_NS_DTL_50K.gml */,
+			);
+			name = DataFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,7 +261,11 @@
 				046574F81A97FA990087357C /* Main.storyboard in Resources */,
 				046574FD1A97FA990087357C /* LaunchScreen.xib in Resources */,
 				046574FA1A97FA990087357C /* Images.xcassets in Resources */,
+				046575291A98BC7F0087357C /* PED_NS_DTL_CMP.csv in Resources */,
 				046575161A9800DF0087357C /* PED_NS_DTL_50K.gml in Resources */,
+				0465752B1A98BC7F0087357C /* PED_NS_DTL_SLF.csv in Resources */,
+				0465752C1A98BC7F0087357C /* PED_NS_DTL_SNF.csv in Resources */,
+				0465752A1A98BC7F0087357C /* PED_NS_DTL_50K.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -260,6 +289,7 @@
 				046574F51A97FA990087357C /* ViewController.m in Sources */,
 				046574EC1A97FA990087357C /* main.m in Sources */,
 				046575181A9802650087357C /* DDFileReader.m in Sources */,
+				0465752E1A98BFD80087357C /* NovaScotiaMapView.m in Sources */,
 				046575131A97FF570087357C /* DataLoader.m in Sources */,
 				046575231A9818080087357C /* ShapePointManagedObjects.m in Sources */,
 			);

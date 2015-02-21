@@ -27,8 +27,13 @@
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-  DataLoader *dataLoader = [[DataLoader alloc] init];
-  [dataLoader loadGMLData];
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  if ([defaults boolForKey:@"DataLoaded"]) {
+    DataLoader *dataLoader = [[DataLoader alloc] init];
+    [dataLoader loadGMLData];
+    [defaults setBool:YES forKey:@"DataLoaded"];
+    [defaults synchronize];
+  }
 }
 
 @end

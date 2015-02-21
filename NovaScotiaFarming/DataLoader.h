@@ -15,5 +15,8 @@
 - (id)init;
 + (id)sharedInstance;
 - (void)loadGMLData;
+- (void)loadGMLDataKey;
+- (void)loadCMPData;
+- (void)loadSoilType;
 
 @end

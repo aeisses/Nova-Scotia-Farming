@@ -11,6 +11,9 @@
 #import "AppDelegate.h"
 #import "ShapePointManagedObject.h"
 #import "SoilSectionManagedObject.h"
+#import "SoilSectionKeyManagedObject.h"
+#import "SoilCMPManagedObject.h"
+#import "SoilTypeManagedObject.h"
 
 static DataLoader *instance;
 
@@ -82,6 +85,8 @@ static DataLoader *instance;
         
       } else if ([line hasPrefix:@"</gml:featureMember"] && _foundGMLTag) {
         _foundGMLTag = NO;
+        NSError *error = nil;
+        [_managedObjectContext save:&error];
         NSLog(@"Addd row");
       } else if (_foundGMLTag) {
         NSMutableString *mutableLine = [[NSMutableString alloc] initWithString:line];
@@ -108,6 +113,16 @@ static DataLoader *instance;
                                             range:NSMakeRange(0,[mutableLine length])];
           soilSectionManagedObject.soilid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
   //        NSLog(@"read line: %@", mutableLine);
+        } else if ([mutableLine hasPrefix:@"<fme:MAPUNIT>"]) {
+          [mutableLine replaceOccurrencesOfString:@"<fme:MAPUNIT>"
+                                       withString:@""
+                                          options:NSLiteralSearch
+                                            range:NSMakeRange(0,[mutableLine length])];
+          [mutableLine replaceOccurrencesOfString:@"</fme:MAPUNIT>\n"
+                                       withString:@""
+                                          options:NSLiteralSearch
+                                            range:NSMakeRange(0,[mutableLine length])];
+          soilSectionManagedObject.mapunit = [mutableLine stringByReplacingOccurrencesOfString:@"/" withString:@""];;
         } else if ([mutableLine hasPrefix:@"<gml:posList>"]) {
           [mutableLine replaceOccurrencesOfString:@"<gml:posList>"
                                        withString:@""
@@ -137,8 +152,69 @@ static DataLoader *instance;
       }
     }
   }];
-  NSError *error = nil;
-  [_managedObjectContext save:&error];
+//  NSError *error = nil;
+//  [_managedObjectContext save:&error];
+  NSLog(@"Finished GEO");
 }
 
+- (void)loadGMLDataKey {
+  NSString *pathToMyFile = [[NSBundle mainBundle] pathForResource:@"PED_NS_DTL_50K" ofType:@"csv"];
+  DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:pathToMyFile];
+  
+  [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
+    @autoreleasepool {
+      if (![line hasPrefix:@"geodb_oid"]) {
+        NSArray *lineSpiltByCommon = [[line stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]] componentsSeparatedByString:@","];
+        SoilSectionKeyManagedObject *soilKey = (SoilSectionKeyManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"SoilSectionKey"inManagedObjectContext:_managedObjectContext];
+        soilKey.objectid = [NSNumber numberWithInt:(uint16_t)[lineSpiltByCommon objectAtIndex:1]];
+        soilKey.mapunit = [(NSString*)[lineSpiltByCommon objectAtIndex:6] stringByReplacingOccurrencesOfString:@"/" withString:@""];
+      }
+    }
+  }];
+  NSError *error = nil;
+  [_managedObjectContext save:&error];
+  NSLog(@"Finsihed DataKey");
+}
+
+- (void)loadCMPData {
+  NSString *pathToMyFile = [[NSBundle mainBundle] pathForResource:@"PED_NS_DTL_CMP" ofType:@"csv"];
+  DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:pathToMyFile];
+  
+  [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
+    @autoreleasepool {
+      if (![line hasPrefix:@"geodb_oid"]) {
+        NSString *removeNewLine = [line stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+        NSArray *lineSpiltByCommon = [removeNewLine componentsSeparatedByString:@","];
+        SoilCMPManagedObject *soilCMP = (SoilCMPManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"SoilCMP" inManagedObjectContext:_managedObjectContext];
+        soilCMP.mapunit = [(NSString*)[lineSpiltByCommon objectAtIndex:2] stringByReplacingOccurrencesOfString:@"/" withString:@""];
+        soilCMP.soiltype = [(NSString*)[lineSpiltByCommon objectAtIndex:7] substringToIndex:([((NSString*)[lineSpiltByCommon objectAtIndex:7]) length] -1)];
+      }
+    }
+  }];
+  NSError *error = nil;
+  [_managedObjectContext save:&error];
+  NSLog(@"Finished CMPData");
+}
+
+- (void)loadSoilType {
+  NSString *pathToMyFile = [[NSBundle mainBundle] pathForResource:@"PED_NS_DTL_SNF" ofType:@"csv"];
+  DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:pathToMyFile];
+  
+  [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
+    @autoreleasepool {
+      if (![line hasPrefix:@"geodb_oid"]) {
+        NSString *removeNewLine = [line stringByTrimmingCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"\n"]];
+        NSArray *lineSpiltByCommon = [removeNewLine componentsSeparatedByString:@","];
+        SoilTypeManagedObject *soilType = (SoilTypeManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"SoilType" inManagedObjectContext:_managedObjectContext];
+        soilType.geoid = [NSNumber numberWithInt:(uint16_t)[(NSString*)[lineSpiltByCommon objectAtIndex:0] intValue]];
+        soilType.objectid = [NSNumber numberWithInt:(uint16_t)[(NSString*)[lineSpiltByCommon objectAtIndex:1] intValue]];
+        soilType.soiltype = (NSString*)[lineSpiltByCommon objectAtIndex:2];
+        soilType.soilname = (NSString*)[lineSpiltByCommon objectAtIndex:4];
+      }
+    }
+  }];
+  NSError *error = nil;
+  [_managedObjectContext save:&error];
+  NSLog(@"Finished SoilType");
+}
 @end

@@ -21,12 +21,15 @@
 		0465751B1A980B900087357C /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0465751A1A980B900087357C /* MapKit.framework */; };
 		0465751D1A980E770087357C /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0465751C1A980E770087357C /* CoreData.framework */; };
 		046575201A9812220087357C /* SoilSectionManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465751F1A9812220087357C /* SoilSectionManagedObject.m */; };
-		046575231A9818080087357C /* ShapePointManagedObjects.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575221A9818080087357C /* ShapePointManagedObjects.m */; };
+		046575231A9818080087357C /* ShapePointManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575221A9818080087357C /* ShapePointManagedObject.m */; };
 		046575291A98BC7F0087357C /* PED_NS_DTL_CMP.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575251A98BC7F0087357C /* PED_NS_DTL_CMP.csv */; };
 		0465752A1A98BC7F0087357C /* PED_NS_DTL_50K.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575261A98BC7F0087357C /* PED_NS_DTL_50K.csv */; };
 		0465752B1A98BC7F0087357C /* PED_NS_DTL_SLF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575271A98BC7F0087357C /* PED_NS_DTL_SLF.csv */; };
 		0465752C1A98BC7F0087357C /* PED_NS_DTL_SNF.csv in Resources */ = {isa = PBXBuildFile; fileRef = 046575281A98BC7F0087357C /* PED_NS_DTL_SNF.csv */; };
 		0465752E1A98BFD80087357C /* NovaScotiaMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0465752D1A98BFD80087357C /* NovaScotiaMapView.m */; };
+		046575311A98DB330087357C /* SoilSectionKeyManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575301A98DB330087357C /* SoilSectionKeyManagedObject.m */; };
+		046575341A98DDDF0087357C /* SoilCMPManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575331A98DDDF0087357C /* SoilCMPManagedObject.m */; };
+		046575381A9902700087357C /* SoilTypeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575371A9902700087357C /* SoilTypeManagedObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,13 +67,19 @@
 		0465751E1A9811250087357C /* SoilSectionManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoilSectionManagedObject.h; sourceTree = "<group>"; };
 		0465751F1A9812220087357C /* SoilSectionManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilSectionManagedObject.m; sourceTree = "<group>"; };
 		046575211A9812A10087357C /* ShapePointManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShapePointManagedObject.h; sourceTree = "<group>"; };
-		046575221A9818080087357C /* ShapePointManagedObjects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapePointManagedObjects.m; sourceTree = "<group>"; };
+		046575221A9818080087357C /* ShapePointManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShapePointManagedObject.m; sourceTree = "<group>"; };
 		046575251A98BC7F0087357C /* PED_NS_DTL_CMP.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_CMP.csv; path = ../../../Downloads/ns/PED_NS_DTL_CMP.csv; sourceTree = "<group>"; };
 		046575261A98BC7F0087357C /* PED_NS_DTL_50K.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_50K.csv; path = ../../../Downloads/ns/PED_NS_DTL_50K.csv; sourceTree = "<group>"; };
 		046575271A98BC7F0087357C /* PED_NS_DTL_SLF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_SLF.csv; path = ../../../Downloads/ns/PED_NS_DTL_SLF.csv; sourceTree = "<group>"; };
 		046575281A98BC7F0087357C /* PED_NS_DTL_SNF.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = PED_NS_DTL_SNF.csv; path = ../../../Downloads/ns/PED_NS_DTL_SNF.csv; sourceTree = "<group>"; };
 		0465752D1A98BFD80087357C /* NovaScotiaMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NovaScotiaMapView.m; sourceTree = "<group>"; };
 		0465752F1A98BFEB0087357C /* NovaScotiaMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NovaScotiaMapView.h; sourceTree = "<group>"; };
+		046575301A98DB330087357C /* SoilSectionKeyManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilSectionKeyManagedObject.m; sourceTree = "<group>"; };
+		046575321A98DB590087357C /* SoilSectionKeyManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoilSectionKeyManagedObject.h; sourceTree = "<group>"; };
+		046575331A98DDDF0087357C /* SoilCMPManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilCMPManagedObject.m; sourceTree = "<group>"; };
+		046575351A98DDF60087357C /* SoilCMPManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoilCMPManagedObject.h; sourceTree = "<group>"; };
+		046575361A99025C0087357C /* SoilTypeManagedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoilTypeManagedObject.h; sourceTree = "<group>"; };
+		046575371A9902700087357C /* SoilTypeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilTypeManagedObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +129,13 @@
 				0465751E1A9811250087357C /* SoilSectionManagedObject.h */,
 				0465751F1A9812220087357C /* SoilSectionManagedObject.m */,
 				046575211A9812A10087357C /* ShapePointManagedObject.h */,
-				046575221A9818080087357C /* ShapePointManagedObjects.m */,
+				046575221A9818080087357C /* ShapePointManagedObject.m */,
+				046575321A98DB590087357C /* SoilSectionKeyManagedObject.h */,
+				046575301A98DB330087357C /* SoilSectionKeyManagedObject.m */,
+				046575351A98DDF60087357C /* SoilCMPManagedObject.h */,
+				046575331A98DDDF0087357C /* SoilCMPManagedObject.m */,
+				046575361A99025C0087357C /* SoilTypeManagedObject.h */,
+				046575371A9902700087357C /* SoilTypeManagedObject.m */,
 				0465752F1A98BFEB0087357C /* NovaScotiaMapView.h */,
 				0465752D1A98BFD80087357C /* NovaScotiaMapView.m */,
 				046575141A97FF6B0087357C /* DataLoader.h */,
@@ -286,12 +301,15 @@
 				046575201A9812220087357C /* SoilSectionManagedObject.m in Sources */,
 				046574EF1A97FA990087357C /* AppDelegate.m in Sources */,
 				046574F21A97FA990087357C /* NovaScotiaFarming.xcdatamodeld in Sources */,
+				046575381A9902700087357C /* SoilTypeManagedObject.m in Sources */,
 				046574F51A97FA990087357C /* ViewController.m in Sources */,
 				046574EC1A97FA990087357C /* main.m in Sources */,
+				046575311A98DB330087357C /* SoilSectionKeyManagedObject.m in Sources */,
 				046575181A9802650087357C /* DDFileReader.m in Sources */,
 				0465752E1A98BFD80087357C /* NovaScotiaMapView.m in Sources */,
+				046575341A98DDDF0087357C /* SoilCMPManagedObject.m in Sources */,
 				046575131A97FF570087357C /* DataLoader.m in Sources */,
-				046575231A9818080087357C /* ShapePointManagedObjects.m in Sources */,
+				046575231A9818080087357C /* ShapePointManagedObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -12,4 +12,8 @@
 
 @interface NovaScotiaMapView : MKMapView
 
+@property (nonatomic, retain) NSManagedObjectContext *context;
+
+- (void)loadAPolygon:(NSString*)type;
+
 @end

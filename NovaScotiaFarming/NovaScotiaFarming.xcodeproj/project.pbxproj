@@ -1,0 +1,446 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		046574EC1A97FA990087357C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 046574EB1A97FA990087357C /* main.m */; };
+		046574EF1A97FA990087357C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 046574EE1A97FA990087357C /* AppDelegate.m */; };
+		046574F21A97FA990087357C /* NovaScotiaFarming.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 046574F01A97FA990087357C /* NovaScotiaFarming.xcdatamodeld */; };
+		046574F51A97FA990087357C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046574F41A97FA990087357C /* ViewController.m */; };
+		046574F81A97FA990087357C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 046574F61A97FA990087357C /* Main.storyboard */; };
+		046574FA1A97FA990087357C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 046574F91A97FA990087357C /* Images.xcassets */; };
+		046574FD1A97FA990087357C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 046574FB1A97FA990087357C /* LaunchScreen.xib */; };
+		046575091A97FA990087357C /* NovaScotiaFarmingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575081A97FA990087357C /* NovaScotiaFarmingTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		046575031A97FA990087357C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 046574DE1A97FA990087357C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 046574E51A97FA990087357C;
+			remoteInfo = NovaScotiaFarming;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		046574E61A97FA990087357C /* NovaScotiaFarming.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NovaScotiaFarming.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		046574EA1A97FA990087357C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046574EB1A97FA990087357C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		046574ED1A97FA990087357C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		046574EE1A97FA990087357C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		046574F11A97FA990087357C /* NovaScotiaFarming.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NovaScotiaFarming.xcdatamodel; sourceTree = "<group>"; };
+		046574F31A97FA990087357C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		046574F41A97FA990087357C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		046574F71A97FA990087357C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		046574F91A97FA990087357C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		046574FC1A97FA990087357C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		046575021A97FA990087357C /* NovaScotiaFarmingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NovaScotiaFarmingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		046575071A97FA990087357C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		046575081A97FA990087357C /* NovaScotiaFarmingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NovaScotiaFarmingTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		046574E31A97FA990087357C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046574FF1A97FA990087357C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		046574DD1A97FA990087357C = {
+			isa = PBXGroup;
+			children = (
+				046574E81A97FA990087357C /* NovaScotiaFarming */,
+				046575051A97FA990087357C /* NovaScotiaFarmingTests */,
+				046574E71A97FA990087357C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		046574E71A97FA990087357C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				046574E61A97FA990087357C /* NovaScotiaFarming.app */,
+				046575021A97FA990087357C /* NovaScotiaFarmingTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		046574E81A97FA990087357C /* NovaScotiaFarming */ = {
+			isa = PBXGroup;
+			children = (
+				046574ED1A97FA990087357C /* AppDelegate.h */,
+				046574EE1A97FA990087357C /* AppDelegate.m */,
+				046574F31A97FA990087357C /* ViewController.h */,
+				046574F41A97FA990087357C /* ViewController.m */,
+				046574F61A97FA990087357C /* Main.storyboard */,
+				046574F91A97FA990087357C /* Images.xcassets */,
+				046574FB1A97FA990087357C /* LaunchScreen.xib */,
+				046574F01A97FA990087357C /* NovaScotiaFarming.xcdatamodeld */,
+				046574E91A97FA990087357C /* Supporting Files */,
+			);
+			path = NovaScotiaFarming;
+			sourceTree = "<group>";
+		};
+		046574E91A97FA990087357C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				046574EA1A97FA990087357C /* Info.plist */,
+				046574EB1A97FA990087357C /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		046575051A97FA990087357C /* NovaScotiaFarmingTests */ = {
+			isa = PBXGroup;
+			children = (
+				046575081A97FA990087357C /* NovaScotiaFarmingTests.m */,
+				046575061A97FA990087357C /* Supporting Files */,
+			);
+			path = NovaScotiaFarmingTests;
+			sourceTree = "<group>";
+		};
+		046575061A97FA990087357C /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				046575071A97FA990087357C /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		046574E51A97FA990087357C /* NovaScotiaFarming */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0465750C1A97FA990087357C /* Build configuration list for PBXNativeTarget "NovaScotiaFarming" */;
+			buildPhases = (
+				046574E21A97FA990087357C /* Sources */,
+				046574E31A97FA990087357C /* Frameworks */,
+				046574E41A97FA990087357C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = NovaScotiaFarming;
+			productName = NovaScotiaFarming;
+			productReference = 046574E61A97FA990087357C /* NovaScotiaFarming.app */;
+			productType = "com.apple.product-type.application";
+		};
+		046575011A97FA990087357C /* NovaScotiaFarmingTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0465750F1A97FA990087357C /* Build configuration list for PBXNativeTarget "NovaScotiaFarmingTests" */;
+			buildPhases = (
+				046574FE1A97FA990087357C /* Sources */,
+				046574FF1A97FA990087357C /* Frameworks */,
+				046575001A97FA990087357C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				046575041A97FA990087357C /* PBXTargetDependency */,
+			);
+			name = NovaScotiaFarmingTests;
+			productName = NovaScotiaFarmingTests;
+			productReference = 046575021A97FA990087357C /* NovaScotiaFarmingTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		046574DE1A97FA990087357C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = KNOWTime;
+				TargetAttributes = {
+					046574E51A97FA990087357C = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					046575011A97FA990087357C = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 046574E51A97FA990087357C;
+					};
+				};
+			};
+			buildConfigurationList = 046574E11A97FA990087357C /* Build configuration list for PBXProject "NovaScotiaFarming" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 046574DD1A97FA990087357C;
+			productRefGroup = 046574E71A97FA990087357C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				046574E51A97FA990087357C /* NovaScotiaFarming */,
+				046575011A97FA990087357C /* NovaScotiaFarmingTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		046574E41A97FA990087357C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046574F81A97FA990087357C /* Main.storyboard in Resources */,
+				046574FD1A97FA990087357C /* LaunchScreen.xib in Resources */,
+				046574FA1A97FA990087357C /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046575001A97FA990087357C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		046574E21A97FA990087357C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046574EF1A97FA990087357C /* AppDelegate.m in Sources */,
+				046574F21A97FA990087357C /* NovaScotiaFarming.xcdatamodeld in Sources */,
+				046574F51A97FA990087357C /* ViewController.m in Sources */,
+				046574EC1A97FA990087357C /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		046574FE1A97FA990087357C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				046575091A97FA990087357C /* NovaScotiaFarmingTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		046575041A97FA990087357C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 046574E51A97FA990087357C /* NovaScotiaFarming */;
+			targetProxy = 046575031A97FA990087357C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		046574F61A97FA990087357C /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046574F71A97FA990087357C /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		046574FB1A97FA990087357C /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				046574FC1A97FA990087357C /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0465750A1A97FA990087357C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0465750B1A97FA990087357C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		0465750D1A97FA990087357C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NovaScotiaFarming/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0465750E1A97FA990087357C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = NovaScotiaFarming/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		046575101A97FA990087357C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NovaScotiaFarmingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovaScotiaFarming.app/NovaScotiaFarming";
+			};
+			name = Debug;
+		};
+		046575111A97FA990087357C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = NovaScotiaFarmingTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NovaScotiaFarming.app/NovaScotiaFarming";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		046574E11A97FA990087357C /* Build configuration list for PBXProject "NovaScotiaFarming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0465750A1A97FA990087357C /* Debug */,
+				0465750B1A97FA990087357C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0465750C1A97FA990087357C /* Build configuration list for PBXNativeTarget "NovaScotiaFarming" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0465750D1A97FA990087357C /* Debug */,
+				0465750E1A97FA990087357C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0465750F1A97FA990087357C /* Build configuration list for PBXNativeTarget "NovaScotiaFarmingTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				046575101A97FA990087357C /* Debug */,
+				046575111A97FA990087357C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		046574F01A97FA990087357C /* NovaScotiaFarming.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				046574F11A97FA990087357C /* NovaScotiaFarming.xcdatamodel */,
+			);
+			currentVersion = 046574F11A97FA990087357C /* NovaScotiaFarming.xcdatamodel */;
+			path = NovaScotiaFarming.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 046574DE1A97FA990087357C /* Project object */;
+}

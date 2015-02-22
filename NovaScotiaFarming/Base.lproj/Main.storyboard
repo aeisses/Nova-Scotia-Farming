@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -20,16 +21,439 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tP6-ig-9VR" customClass="NovaScotiaMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-BK-Upg">
+                                <rect key="frame" x="364" y="5" width="236" height="549"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4P-of-DwT">
+                                        <rect key="frame" x="10" y="50" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Barney">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JRr-2R-RWA"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qwc-BC-0G4">
+                                        <rect key="frame" x="10" y="85" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Bryden">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VW2-WC-XUd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kgm-sq-HSk">
+                                        <rect key="frame" x="10" y="120" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Cobequid">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qXj-bP-KJD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D8E-yk-YHs">
+                                        <rect key="frame" x="10" y="155" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Cumberland">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRJ-sm-itU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gxt-Ce-4Wu">
+                                        <rect key="frame" x="10" y="190" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Castley">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ReH-kU-VR2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oH6-th-3ul">
+                                        <rect key="frame" x="10" y="225" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Hebert">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Iux-m6-q0K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aYS-Mg-RVh">
+                                        <rect key="frame" x="10" y="260" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Hansford">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jWX-6K-8Zf"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qew-QN-6tX">
+                                        <rect key="frame" x="10" y="295" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Hopewell">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q44-dz-MM8"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMI-d9-sIe">
+                                        <rect key="frame" x="10" y="330" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Joggins">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lgw-Tx-iWp"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zzG-43-BRF">
+                                        <rect key="frame" x="10" y="365" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Kirkhill">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z1Q-AT-dWD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xw7-1W-a4B">
+                                        <rect key="frame" x="10" y="400" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Kirkmount">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QVP-tn-rGq"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Tz-g6-QlP">
+                                        <rect key="frame" x="10" y="435" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Millbrook">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ygb-w7-lUJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CxK-2T-0yn">
+                                        <rect key="frame" x="10" y="470" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Pugwash">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7M6-3L-1hE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-Fm-bsW">
+                                        <rect key="frame" x="10" y="505" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Perch Lake">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cYS-I3-Emm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sGh-gL-K18">
+                                        <rect key="frame" x="125" y="400" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Queens">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="R9M-4F-rWT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E6F-6s-KeI">
+                                        <rect key="frame" x="125" y="260" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Shulie">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9q6-UV-X53"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MRf-Ki-20v">
+                                        <rect key="frame" x="125" y="295" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Thom">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GQH-Lp-KPJ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFz-88-nYq">
+                                        <rect key="frame" x="125" y="330" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Westbrook">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jkE-Gf-LVY"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPX-1n-SGh">
+                                        <rect key="frame" x="125" y="50" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Woodbourne">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cDq-Vo-d8c"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mle-qc-ls7">
+                                        <rect key="frame" x="125" y="85" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Wyvern">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5Pa-hh-mwN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x23-SX-sfr">
+                                        <rect key="frame" x="125" y="120" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Coastal Beach">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="USf-yq-oAL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6YW-Iy-7SH">
+                                        <rect key="frame" x="125" y="155" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Mine Tailings">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KGp-xS-YY7"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mk8-E7-YjL">
+                                        <rect key="frame" x="125" y="190" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Salt Marsh">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wt3-yN-ZGT"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q3K-C6-nvj">
+                                        <rect key="frame" x="125" y="225" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Horton">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u2I-uH-OhF"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Soil Types" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Is9-GV-gLh">
+                                        <rect key="frame" x="29" y="15" width="180" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoD-wm-0Ap">
+                                        <rect key="frame" x="125" y="365" width="105" height="30"/>
+                                        <color key="backgroundColor" red="0.76078431372549016" green="0.61568627450980395" blue="0.30588235294117649" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Stewiacke">
+                                            <color key="titleColor" red="0.14509803921568629" green="0.24313725490196078" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="touchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aTr-EG-5QC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.93725490196078431" green="0.396078431372549" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="549" id="Laj-Iw-cl2"/>
+                                    <constraint firstAttribute="width" constant="236" id="U4H-tz-NCs"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tP6-ig-9VR" secondAttribute="trailing" id="6Cl-xo-2cL"/>
                             <constraint firstItem="tP6-ig-9VR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jhb-Kd-77Z"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0nB-BK-Upg" secondAttribute="trailing" id="Vjg-Tl-ewZ"/>
                             <constraint firstItem="tP6-ig-9VR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cCA-Nc-WJJ"/>
                             <constraint firstItem="tP6-ig-9VR" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="dWQ-eN-7UR"/>
+                            <constraint firstItem="0nB-BK-Upg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qnf-ls-HNE"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="BarneyButton" destination="y4P-of-DwT" id="hcM-hg-DEf"/>
+                        <outlet property="BrydenButton" destination="Qwc-BC-0G4" id="J2J-iW-xKt"/>
+                        <outlet property="CastleyButton" destination="Gxt-Ce-4Wu" id="ffD-Ei-eb2"/>
+                        <outlet property="CoastalBeachButton" destination="x23-SX-sfr" id="22P-t5-LPQ"/>
+                        <outlet property="CobequidButton" destination="kgm-sq-HSk" id="W5b-Oi-05P"/>
+                        <outlet property="CumberlandButton" destination="D8E-yk-YHs" id="gYz-es-vMa"/>
+                        <outlet property="HansfordButton" destination="aYS-Mg-RVh" id="O9f-ZO-Gbh"/>
+                        <outlet property="HebertButton" destination="oH6-th-3ul" id="iYA-Bw-rVJ"/>
+                        <outlet property="HopewellButton" destination="qew-QN-6tX" id="zda-wa-4R7"/>
+                        <outlet property="HortonButton" destination="q3K-C6-nvj" id="PNX-mP-SeD"/>
+                        <outlet property="JogginsButton" destination="vMI-d9-sIe" id="k6W-yP-p6C"/>
+                        <outlet property="KirkhillButton" destination="zzG-43-BRF" id="1K0-tS-vGJ"/>
+                        <outlet property="KirkmountButton" destination="Xw7-1W-a4B" id="faU-o7-ODJ"/>
+                        <outlet property="MillbrookButton" destination="7Tz-g6-QlP" id="fSo-K3-0RD"/>
+                        <outlet property="MineTailingsButton" destination="6YW-Iy-7SH" id="Tmh-ov-ppV"/>
+                        <outlet property="PerchLakeButton" destination="7I5-Fm-bsW" id="EVG-ko-o2u"/>
+                        <outlet property="PugwashButton" destination="CxK-2T-0yn" id="lg5-Ka-qNx"/>
+                        <outlet property="QueensButton" destination="sGh-gL-K18" id="OzY-FM-ZWF"/>
+                        <outlet property="SaltMarshButton" destination="Mk8-E7-YjL" id="r7b-M5-0Zv"/>
+                        <outlet property="ShulieButton" destination="E6F-6s-KeI" id="ykP-oH-Saa"/>
+                        <outlet property="StewiackeButton" destination="hoD-wm-0Ap" id="cH1-65-Eyt"/>
+                        <outlet property="ThomButton" destination="MRf-Ki-20v" id="Drl-qp-afO"/>
+                        <outlet property="WestbrookButton" destination="JFz-88-nYq" id="sxV-gr-W38"/>
+                        <outlet property="WoodbourneButton" destination="EPX-1n-SGh" id="fn3-gb-A49"/>
+                        <outlet property="WyvernButton" destination="mle-qc-ls7" id="tCl-sf-55A"/>
                         <outlet property="nsMapView" destination="tP6-ig-9VR" id="x8z-d6-l42"/>
                     </connections>
                 </viewController>

@@ -73,8 +73,6 @@ static DataLoader *instance;
 - (void)loadGMLData {
   NSString *pathToMyFile = [[NSBundle mainBundle] pathForResource:@"PED_NS_DTL_50K" ofType:@"gml"];
   DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:pathToMyFile];
-//  NSEntityDescription *soilSectionEntity = [NSEntityDescription entityForName:@"SoilSection" inManagedObjectContext:_managedObjectContext];
-//  NSEntityDescription *shapePointEntity = [NSEntityDescription entityForName:@"ShapePoint" inManagedObjectContext:_managedObjectContext];
   __block SoilSectionManagedObject *soilSectionManagedObject;
   
   [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
@@ -85,8 +83,10 @@ static DataLoader *instance;
         
       } else if ([line hasPrefix:@"</gml:featureMember"] && _foundGMLTag) {
         _foundGMLTag = NO;
-        NSError *error = nil;
-        [_managedObjectContext save:&error];
+//        dispatch_async(dispatch_get_main_queue(), ^{
+          NSError *error = nil;
+          [_managedObjectContext save:&error];
+//        });
         NSLog(@"Addd row");
       } else if (_foundGMLTag) {
         NSMutableString *mutableLine = [[NSMutableString alloc] initWithString:line];
@@ -152,8 +152,6 @@ static DataLoader *instance;
       }
     }
   }];
-//  NSError *error = nil;
-//  [_managedObjectContext save:&error];
   NSLog(@"Finished GEO");
 }
 
@@ -171,9 +169,11 @@ static DataLoader *instance;
       }
     }
   }];
-  NSError *error = nil;
-  [_managedObjectContext save:&error];
-  NSLog(@"Finsihed DataKey");
+//  dispatch_async(dispatch_get_main_queue(), ^{
+    NSError *error = nil;
+    [_managedObjectContext save:&error];
+    NSLog(@"Finsihed DataKey");
+//  });
 }
 
 - (void)loadCMPData {
@@ -191,9 +191,11 @@ static DataLoader *instance;
       }
     }
   }];
-  NSError *error = nil;
-  [_managedObjectContext save:&error];
-  NSLog(@"Finished CMPData");
+//  dispatch_async(dispatch_get_main_queue(), ^{
+    NSError *error = nil;
+    [_managedObjectContext save:&error];
+    NSLog(@"Finished CMPData");
+//  });
 }
 
 - (void)loadSoilType {
@@ -213,8 +215,10 @@ static DataLoader *instance;
       }
     }
   }];
-  NSError *error = nil;
-  [_managedObjectContext save:&error];
-  NSLog(@"Finished SoilType");
+//  dispatch_async(dispatch_get_main_queue(), ^{
+    NSError *error = nil;
+    [_managedObjectContext save:&error];
+    NSLog(@"Finished SoilType");
+//  });
 }
 @end

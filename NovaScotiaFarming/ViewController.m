@@ -82,20 +82,18 @@
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
     MKCoordinateSpan span = MKCoordinateSpanMake(3.662484, 7.125030);
     [_nsMapView setRegion:MKCoordinateRegionMake(center, span)];
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-      DataLoader *dataLoader = [[DataLoader alloc] init];
-      [dataLoader loadGMLData];
-      [dataLoader loadGMLDataKey];
-      [dataLoader loadCMPData];
-      [dataLoader loadSoilType];
-      [defaults setBool:YES forKey:@"DataLoaded"];
-      [defaults synchronize];
-      dispatch_async(dispatch_get_main_queue(), ^{
-        [_shader removeFromSuperview];
-        [_spinner removeFromSuperview];
-        [_infoLabel removeFromSuperview];
-        [_nsMapView setUserInteractionEnabled:YES];
-      });
+    DataLoader *dataLoader = [[DataLoader alloc] init];
+    [dataLoader loadGMLData];
+    [dataLoader loadGMLDataKey];
+    [dataLoader loadCMPData];
+    [dataLoader loadSoilType];
+    [defaults setBool:YES forKey:@"DataLoaded"];
+    [defaults synchronize];
+    dispatch_async(dispatch_get_main_queue(), ^{
+      [_shader removeFromSuperview];
+      [_spinner removeFromSuperview];
+      [_infoLabel removeFromSuperview];
+      [_nsMapView setUserInteractionEnabled:YES];
     });
   } else {
     CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
@@ -114,10 +112,6 @@
     return aView;
   }
   return nil;
-}
-
-- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
-  NSLog(@"%f, %f, %f, %f",mapView.region.center.latitude,mapView.region.center.longitude,mapView.region.span.latitudeDelta,mapView.region.span.longitudeDelta);
 }
 
 - (IBAction)touchButton:(id)sender {

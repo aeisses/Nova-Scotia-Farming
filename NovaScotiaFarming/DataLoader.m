@@ -84,10 +84,7 @@ static DataLoader *instance;
         
       } else if ([line hasPrefix:@"</gml:featureMember"] && _foundGMLTag) {
         _foundGMLTag = NO;
-//        dispatch_async(dispatch_get_main_queue(), ^{
-          NSError *error = nil;
-          [_managedObjectContext save:&error];
-//        });
+        [((AppDelegate*)[[UIApplication sharedApplication] delegate]) saveContext];
         NSLog(@"Addd row");
       } else if (_foundGMLTag) {
         NSMutableString *mutableLine = [[NSMutableString alloc] initWithString:line];
@@ -102,7 +99,6 @@ static DataLoader *instance;
                                           options:NSLiteralSearch
                                             range:NSMakeRange(0,[mutableLine length])];
           wSelf.soilSectionManagedObject.objectid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
-  //        NSLog(@"read line: %@", mutableLine);
         } else if ([mutableLine hasPrefix:@"<fme:SOIL_ID>"]) {
           [mutableLine replaceOccurrencesOfString:@"<fme:SOIL_ID>"
                                        withString:@""
@@ -113,7 +109,6 @@ static DataLoader *instance;
                                           options:NSLiteralSearch
                                             range:NSMakeRange(0,[mutableLine length])];
           wSelf.soilSectionManagedObject.soilid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
-  //        NSLog(@"read line: %@", mutableLine);
         } else if ([mutableLine hasPrefix:@"<fme:MAPUNIT>"]) {
           [mutableLine replaceOccurrencesOfString:@"<fme:MAPUNIT>"
                                        withString:@""
@@ -138,21 +133,16 @@ static DataLoader *instance;
           if ([pointArray count] % 2 != 0) {
             NSLog(@"Error in the number of points in the array");
           } else {
-//            @try {
-              NSMutableOrderedSet *shapePoints = [NSMutableOrderedSet new];
-              for (int i=0; i<[pointArray count]; i+=2) {
-                ShapePointManagedObject *shapePoint = (ShapePointManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"ShapePoint" inManagedObjectContext:_managedObjectContext];
-                CLLocationCoordinate2D location = [self convertWebMercatorToGeographicX:[[pointArray objectAtIndex:i] doubleValue] Y:[[pointArray objectAtIndex:i+1] doubleValue]];
-                shapePoint.latitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.latitude];
-                shapePoint.longitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.longitude];
-                shapePoint.soilSection = wSelf.soilSectionManagedObject;
-                [shapePoints addObject:shapePoint];
-              }
-              wSelf.soilSectionManagedObject.shapePoints = (NSOrderedSet*)shapePoints;
-//            }
-//            @catch (NSException * e) {
-//              NSLog(@"Exception: %@", e);
-//            }
+            NSMutableOrderedSet *shapePoints = [NSMutableOrderedSet new];
+            for (int i=0; i<[pointArray count]; i+=2) {
+              ShapePointManagedObject *shapePoint = (ShapePointManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"ShapePoint" inManagedObjectContext:_managedObjectContext];
+              CLLocationCoordinate2D location = [self convertWebMercatorToGeographicX:[[pointArray objectAtIndex:i] doubleValue] Y:[[pointArray objectAtIndex:i+1] doubleValue]];
+              shapePoint.latitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.latitude];
+              shapePoint.longitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.longitude];
+              shapePoint.soilSection = wSelf.soilSectionManagedObject;
+              [shapePoints addObject:shapePoint];
+            }
+            wSelf.soilSectionManagedObject.shapePoints = (NSOrderedSet*)shapePoints;
           }
         }
       }
@@ -175,11 +165,8 @@ static DataLoader *instance;
       }
     }
   }];
-//  dispatch_async(dispatch_get_main_queue(), ^{
-    NSError *error = nil;
-    [_managedObjectContext save:&error];
+  [((AppDelegate*)[[UIApplication sharedApplication] delegate]) saveContext];
     NSLog(@"Finsihed DataKey");
-//  });
 }
 
 - (void)loadCMPData {
@@ -197,11 +184,8 @@ static DataLoader *instance;
       }
     }
   }];
-//  dispatch_async(dispatch_get_main_queue(), ^{
-    NSError *error = nil;
-    [_managedObjectContext save:&error];
-    NSLog(@"Finished CMPData");
-//  });
+  [((AppDelegate*)[[UIApplication sharedApplication] delegate]) saveContext];
+  NSLog(@"Finished CMPData");
 }
 
 - (void)loadSoilType {
@@ -221,10 +205,8 @@ static DataLoader *instance;
       }
     }
   }];
-//  dispatch_async(dispatch_get_main_queue(), ^{
-    NSError *error = nil;
-    [_managedObjectContext save:&error];
-    NSLog(@"Finished SoilType");
-//  });
+  [((AppDelegate*)[[UIApplication sharedApplication] delegate]) saveContext];
+  NSLog(@"Finished SoilType");
 }
+
 @end

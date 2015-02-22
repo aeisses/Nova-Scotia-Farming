@@ -15,6 +15,7 @@
 @property (nonatomic, strong) IBOutlet UIView *shader;
 @property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
 @property (nonatomic, strong) IBOutlet UILabel *infoLabel;
+@property (nonatomic, strong) IBOutlet UIButton *infoButton;
 
 @property (nonatomic, strong) IBOutlet UIButton *BarneyButton;
 @property (nonatomic, strong) IBOutlet UIButton *BrydenButton;
@@ -43,6 +44,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *HortonButton;
 
 - (IBAction)touchButton:(id)sender;
+- (IBAction)touchInfoButton:(id)sender;
 
 @end
 

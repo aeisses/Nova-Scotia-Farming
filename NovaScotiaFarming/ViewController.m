@@ -51,7 +51,7 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
   _nsMapView.delegate = self;
-
+  
   _nsMapView.mapType = MKMapTypeSatellite;
   _nsMapView.context = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).managedObjectContext;
 
@@ -73,15 +73,15 @@
 
 - (void)viewWillAppear:(BOOL)animated {
   [super viewWillAppear:animated];
-  CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
-  MKCoordinateSpan span = MKCoordinateSpanMake(3.227896, 6.161726);
-  [_nsMapView setRegion:MKCoordinateRegionMake(center, span)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
   NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
   if (![defaults boolForKey:@"DataLoaded"]) {
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
+    MKCoordinateSpan span = MKCoordinateSpanMake(3.662484, 7.125030);
+    [_nsMapView setRegion:MKCoordinateRegionMake(center, span)];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
       DataLoader *dataLoader = [[DataLoader alloc] init];
       [dataLoader loadGMLData];
@@ -97,6 +97,10 @@
         [_nsMapView setUserInteractionEnabled:YES];
       });
     });
+  } else {
+    CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
+    MKCoordinateSpan span = MKCoordinateSpanMake(3.662484, 7.125030);
+    [_nsMapView setRegion:MKCoordinateRegionMake(center, span)];
   }
 }
 
@@ -110,6 +114,10 @@
     return aView;
   }
   return nil;
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
+  NSLog(@"%f, %f, %f, %f",mapView.region.center.latitude,mapView.region.center.longitude,mapView.region.span.latitudeDelta,mapView.region.span.longitudeDelta);
 }
 
 - (IBAction)touchButton:(id)sender {
@@ -166,5 +174,17 @@
     [_nsMapView loadAPolygon:@"Horton"];
   }
 }
+
+
+- (IBAction)touchInfoButton:(id)sender {
+  if (_nsMapView.mapType == MKMapTypeSatellite) {
+    _nsMapView.mapType = MKMapTypeHybrid;
+  } else if (_nsMapView.mapType == MKMapTypeHybrid) {
+    _nsMapView.mapType = MKMapTypeStandard;
+  } else {
+    _nsMapView.mapType = MKMapTypeSatellite;
+  }
+}
+
 
 @end

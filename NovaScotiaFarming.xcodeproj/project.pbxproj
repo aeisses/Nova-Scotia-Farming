@@ -32,6 +32,8 @@
 		046575381A9902700087357C /* SoilTypeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575371A9902700087357C /* SoilTypeManagedObject.m */; };
 		0465753A1A9A5E0A0087357C /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 046575391A9A5E0A0087357C /* launchImage.png */; };
 		0465753C1A9A5E880087357C /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753B1A9A5E880087357C /* launchImage@2x.png */; };
+		0465753F1A9A668E0087357C /* infoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753D1A9A668E0087357C /* infoButton@2x.png */; };
+		046575401A9A668E0087357C /* infoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753E1A9A668E0087357C /* infoButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,8 @@
 		046575371A9902700087357C /* SoilTypeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilTypeManagedObject.m; sourceTree = "<group>"; };
 		046575391A9A5E0A0087357C /* launchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage.png; sourceTree = "<group>"; };
 		0465753B1A9A5E880087357C /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
+		0465753D1A9A668E0087357C /* infoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@2x.png"; sourceTree = "<group>"; };
+		0465753E1A9A668E0087357C /* infoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 		046574E81A97FA990087357C /* NovaScotiaFarming */ = {
 			isa = PBXGroup;
 			children = (
+				0465753D1A9A668E0087357C /* infoButton@2x.png */,
+				0465753E1A9A668E0087357C /* infoButton.png */,
 				0465753B1A9A5E880087357C /* launchImage@2x.png */,
 				046575391A9A5E0A0087357C /* launchImage.png */,
 				046575241A98BC4A0087357C /* DataFiles */,
@@ -284,6 +290,8 @@
 				046574FA1A97FA990087357C /* Images.xcassets in Resources */,
 				0465753A1A9A5E0A0087357C /* launchImage.png in Resources */,
 				046575291A98BC7F0087357C /* PED_NS_DTL_CMP.csv in Resources */,
+				046575401A9A668E0087357C /* infoButton.png in Resources */,
+				0465753F1A9A668E0087357C /* infoButton@2x.png in Resources */,
 				046575161A9800DF0087357C /* PED_NS_DTL_50K.gml in Resources */,
 				0465752B1A98BC7F0087357C /* PED_NS_DTL_SLF.csv in Resources */,
 				0465752C1A98BC7F0087357C /* PED_NS_DTL_SNF.csv in Resources */,

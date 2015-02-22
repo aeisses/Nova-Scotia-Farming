@@ -3,6 +3,7 @@
     <entity name="ShapePoint" syncable="YES">
         <attribute name="latitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="longitude" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <relationship name="cutOutSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SoilSection" inverseName="cutOutPoints" inverseEntity="SoilSection" syncable="YES"/>
         <relationship name="soilSection" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="SoilSection" inverseName="shapePoints" inverseEntity="SoilSection" syncable="YES"/>
     </entity>
     <entity name="SoilCMP" syncable="YES">
@@ -17,6 +18,7 @@
         <attribute name="shapelength" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
         <attribute name="soilid" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
         <attribute name="waterarea" optional="YES" attributeType="Integer 16" defaultValueString="0" syncable="YES"/>
+        <relationship name="cutOutPoints" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ShapePoint" inverseName="cutOutSection" inverseEntity="ShapePoint" syncable="YES"/>
         <relationship name="shapePoints" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="ShapePoint" inverseName="soilSection" inverseEntity="ShapePoint" syncable="YES"/>
     </entity>
     <entity name="SoilSectionKey" syncable="YES">
@@ -30,10 +32,10 @@
         <attribute name="soiltype" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="SoilSection" positionX="-63" positionY="-18" width="128" height="163"/>
-        <element name="ShapePoint" positionX="187" positionY="18" width="128" height="88"/>
-        <element name="SoilType" positionX="81" positionY="63" width="128" height="105"/>
-        <element name="SoilSectionKey" positionX="90" positionY="81" width="128" height="75"/>
-        <element name="SoilCMP" positionX="99" positionY="90" width="128" height="75"/>
+        <element name="SoilSection" positionX="-63" positionY="-18" width="128" height="178"/>
+        <element name="ShapePoint" positionX="187" positionY="18" width="128" height="103"/>
+        <element name="SoilType" positionX="-54" positionY="234" width="128" height="105"/>
+        <element name="SoilSectionKey" positionX="322" positionY="213" width="128" height="75"/>
+        <element name="SoilCMP" positionX="124" positionY="315" width="128" height="75"/>
     </elements>
 </model>

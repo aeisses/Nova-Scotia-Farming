@@ -19,5 +19,6 @@
 @property (nonatomic, retain) NSDecimalNumber *shapearea;
 @property (nonatomic, retain) NSString *mapunit;
 @property (nonatomic, retain) NSOrderedSet *shapePoints;
+@property (nonatomic, retain) NSOrderedSet *cutOutPoints;
 
 @end

@@ -18,5 +18,6 @@
 @synthesize shapearea;
 @synthesize mapunit;
 @synthesize shapePoints;
+@synthesize cutOutPoints;
 
 @end

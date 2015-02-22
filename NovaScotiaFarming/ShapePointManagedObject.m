@@ -13,5 +13,6 @@
 @synthesize longitude;
 @synthesize latitude;
 @synthesize soilSection;
+@synthesize cutOutSection;
 
 @end

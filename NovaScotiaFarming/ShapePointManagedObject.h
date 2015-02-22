@@ -15,5 +15,5 @@
 @property (nonatomic, strong) NSDecimalNumber *longitude;
 @property (nonatomic, strong) NSDecimalNumber *latitude;
 @property (nonatomic, strong) SoilSectionManagedObject *soilSection;
-
+@property (nonatomic, strong) SoilSectionManagedObject *cutOutSection;
 @end

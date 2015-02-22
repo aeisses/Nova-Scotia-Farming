@@ -34,6 +34,7 @@
 		0465753C1A9A5E880087357C /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753B1A9A5E880087357C /* launchImage@2x.png */; };
 		0465753F1A9A668E0087357C /* infoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753D1A9A668E0087357C /* infoButton@2x.png */; };
 		046575401A9A668E0087357C /* infoButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753E1A9A668E0087357C /* infoButton.png */; };
+		046575431A9A75040087357C /* NSPolygon.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575421A9A75040087357C /* NSPolygon.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		0465753B1A9A5E880087357C /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
 		0465753D1A9A668E0087357C /* infoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "infoButton@2x.png"; sourceTree = "<group>"; };
 		0465753E1A9A668E0087357C /* infoButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = infoButton.png; sourceTree = "<group>"; };
+		046575411A9A74E70087357C /* NSPolygon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSPolygon.h; sourceTree = "<group>"; };
+		046575421A9A75040087357C /* NSPolygon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSPolygon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				046575331A98DDDF0087357C /* SoilCMPManagedObject.m */,
 				046575361A99025C0087357C /* SoilTypeManagedObject.h */,
 				046575371A9902700087357C /* SoilTypeManagedObject.m */,
+				046575411A9A74E70087357C /* NSPolygon.h */,
+				046575421A9A75040087357C /* NSPolygon.m */,
 				0465752F1A98BFEB0087357C /* NovaScotiaMapView.h */,
 				0465752D1A98BFD80087357C /* NovaScotiaMapView.m */,
 				046575141A97FF6B0087357C /* DataLoader.h */,
@@ -317,6 +322,7 @@
 				046575201A9812220087357C /* SoilSectionManagedObject.m in Sources */,
 				046574EF1A97FA990087357C /* AppDelegate.m in Sources */,
 				046574F21A97FA990087357C /* NovaScotiaFarming.xcdatamodeld in Sources */,
+				046575431A9A75040087357C /* NSPolygon.m in Sources */,
 				046575381A9902700087357C /* SoilTypeManagedObject.m in Sources */,
 				046574F51A97FA990087357C /* ViewController.m in Sources */,
 				046574EC1A97FA990087357C /* main.m in Sources */,

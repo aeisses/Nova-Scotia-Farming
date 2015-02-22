@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "DataLoader.h"
 #import "AppDelegate.h"
+#import "NSPolygon.h"
 
 @interface ViewController ()
 
@@ -46,6 +47,7 @@
 @synthesize MineTailingsButton = _MineTailingsButton;
 @synthesize SaltMarshButton = _SaltMarshButton;
 @synthesize HortonButton = _HortonButton;
+@synthesize AllButton = _AllButton;
 
 - (void)viewDidLoad {
   [super viewDidLoad];
@@ -105,8 +107,58 @@
 - (MKOverlayView*)mapView:(MKMapView *)mapView viewForOverlay:(id<MKOverlay>)overlay
 {
   if ([overlay isKindOfClass:[MKPolygon class]]) {
-    MKPolygonView *aView = [[MKPolygonView alloc] initWithPolygon:(MKPolygon*)overlay];
-    aView.fillColor = [[UIColor greenColor] colorWithAlphaComponent:0.6];
+    MKPolygonView *aView = [[MKPolygonView alloc] initWithPolygon:(NSPolygon*)overlay];
+    if ([((NSPolygon*)overlay).soilName isEqualToString:@"Barney"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Bryden"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.2f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Cobequid"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.4f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Cumberland"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.6f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Castley"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.8f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Hebert"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:1.0f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Hansford"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.2f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Hopewell"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.4f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Joggins"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.6f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Kirkhill"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:0.8f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Kirkmount"]) {
+      aView.fillColor = [UIColor colorWithRed:1.0f green:0.0f blue:1.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Millbrook"]) {
+      aView.fillColor = [UIColor colorWithRed:0.0f green:1.0f blue:0.2f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Pugwash"]) {
+      aView.fillColor = [UIColor colorWithRed:0.0f green:1.0f blue:0.4f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Perch Lake"]) {
+      aView.fillColor = [UIColor colorWithRed:0.0f green:1.0f blue:0.6f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Queens"]) {
+      aView.fillColor = [UIColor colorWithRed:0.0f green:1.0f blue:0.8f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Stewiacke"]) {
+      aView.fillColor = [UIColor colorWithRed:0.0f green:1.0f blue:1.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Shulie"]) {
+      aView.fillColor = [UIColor colorWithRed:0.2f green:1.0f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Thom"]) {
+      aView.fillColor = [UIColor colorWithRed:0.4f green:1.0f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Westbrook"]) {
+      aView.fillColor = [UIColor colorWithRed:0.6f green:1.0f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Woodbourne"]) {
+      aView.fillColor = [UIColor colorWithRed:0.8f green:1.0f blue:0.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Wyvern"]) {
+      aView.fillColor = [UIColor colorWithRed:0.2f green:0.0f blue:1.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Coastal Beach"]) {
+      aView.fillColor = [UIColor colorWithRed:0.4f green:0.0f blue:1.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Mine Tailings"]) {
+      aView.fillColor = [UIColor colorWithRed:0.6f green:0.0f blue:1.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Salt Marsh"]) {
+      aView.fillColor = [UIColor colorWithRed:0.8f green:0.0f blue:1.0f alpha:0.6];
+    } else if ([((NSPolygon*)overlay).soilName isEqualToString:@"Horten"]) {
+      aView.fillColor = [UIColor colorWithRed:0.0f green:1.0f blue:0.0f alpha:0.6];
+    }
     aView.strokeColor = [[UIColor brownColor] colorWithAlphaComponent:1.0];
     aView.lineWidth = 2;
     return aView;
@@ -165,7 +217,9 @@
   } else if ([(UIButton*)sender isEqual:_SaltMarshButton]) {
     [_nsMapView loadAPolygon:@"Salt Marsh"];
   } else if ([(UIButton*)sender isEqual:_HortonButton]) {
-    [_nsMapView loadAPolygon:@"Horton"];
+    [_nsMapView loadAPolygon:@"Horten"];
+  } else if ([(UIButton*)sender isEqual:_AllButton]) {
+    [_nsMapView loadAPolygon:@"All"];
   }
 }
 

@@ -42,6 +42,7 @@
 @property (nonatomic, strong) IBOutlet UIButton *MineTailingsButton;
 @property (nonatomic, strong) IBOutlet UIButton *SaltMarshButton;
 @property (nonatomic, strong) IBOutlet UIButton *HortonButton;
+@property (nonatomic, strong) IBOutlet UIButton *AllButton;
 
 - (IBAction)touchButton:(id)sender;
 - (IBAction)touchInfoButton:(id)sender;

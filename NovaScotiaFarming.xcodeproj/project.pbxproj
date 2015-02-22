@@ -259,6 +259,7 @@
 				TargetAttributes = {
 					046574E51A97FA990087357C = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = LK2576GXKT;
 					};
 					046575011A97FA990087357C = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -454,9 +455,12 @@
 		0465750D1A97FA990087357C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALTERNATE_GROUP = admin;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = NovaScotiaFarming/Info.plist;
+				INSTALL_GROUP = admin;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -467,9 +471,12 @@
 		0465750E1A97FA990087357C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALTERNATE_GROUP = admin;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = NovaScotiaFarming/Info.plist;
+				INSTALL_GROUP = admin;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";

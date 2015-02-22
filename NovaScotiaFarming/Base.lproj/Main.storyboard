@@ -445,8 +445,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-9A-8ff">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="616"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-9A-8ff">
+                                <rect key="frame" x="0.0" y="-16" width="600" height="616"/>
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PhV-b0-Gho">
                                         <rect key="frame" x="282" y="289" width="37" height="37"/>

@@ -10,8 +10,11 @@ Once the app is loaded, touch the soil type buttons on the side, the location of
 be shown on the map. It appears the data set was not complete, so that is disappointing.
 
 Debugging:
-The app runs well at the moment. There is one known bug. Do not touch the screen while the app is loading the data.
-This will cause the managedContext to error and crash. I did not have a chance to fix this bug.
+The app should run fine. I placed an .ipa file in the main directory. You will not be able to run this, I do not have an enterprise account. But you should be able to build locally.
+Zoom in to the Antigonish area to see the soil types. That is the location where the data was from.
+
+Known Bugs:
+If you tap on the soil buttons before the polygons have finished loading a crash can occure. This is generally a issue when touching the "All" button. There is a lot of polygons to load when the all button is touched.
 
 TODO:
 Remove the interio of the polygons from the map. Ran out of time to do this.

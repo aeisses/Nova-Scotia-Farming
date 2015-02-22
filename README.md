@@ -12,3 +12,6 @@ be shown on the map. It appears the data set was not complete, so that is disapp
 Debugging:
 The app runs well at the moment. There is one known bug. Do not touch the screen while the app is loading the data.
 This will cause the managedContext to error and crash. I did not have a chance to fix this bug.
+
+TODO:
+Remove the interio of the polygons from the map. Ran out of time to do this.

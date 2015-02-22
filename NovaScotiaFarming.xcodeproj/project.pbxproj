@@ -30,6 +30,8 @@
 		046575311A98DB330087357C /* SoilSectionKeyManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575301A98DB330087357C /* SoilSectionKeyManagedObject.m */; };
 		046575341A98DDDF0087357C /* SoilCMPManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575331A98DDDF0087357C /* SoilCMPManagedObject.m */; };
 		046575381A9902700087357C /* SoilTypeManagedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 046575371A9902700087357C /* SoilTypeManagedObject.m */; };
+		0465753A1A9A5E0A0087357C /* launchImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 046575391A9A5E0A0087357C /* launchImage.png */; };
+		0465753C1A9A5E880087357C /* launchImage@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0465753B1A9A5E880087357C /* launchImage@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +82,8 @@
 		046575351A98DDF60087357C /* SoilCMPManagedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SoilCMPManagedObject.h; sourceTree = "<group>"; };
 		046575361A99025C0087357C /* SoilTypeManagedObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoilTypeManagedObject.h; sourceTree = "<group>"; };
 		046575371A9902700087357C /* SoilTypeManagedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoilTypeManagedObject.m; sourceTree = "<group>"; };
+		046575391A9A5E0A0087357C /* launchImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = launchImage.png; sourceTree = "<group>"; };
+		0465753B1A9A5E880087357C /* launchImage@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchImage@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,8 @@
 		046574E81A97FA990087357C /* NovaScotiaFarming */ = {
 			isa = PBXGroup;
 			children = (
+				0465753B1A9A5E880087357C /* launchImage@2x.png */,
+				046575391A9A5E0A0087357C /* launchImage.png */,
 				046575241A98BC4A0087357C /* DataFiles */,
 				0465751E1A9811250087357C /* SoilSectionManagedObject.h */,
 				0465751F1A9812220087357C /* SoilSectionManagedObject.m */,
@@ -276,11 +282,13 @@
 				046574F81A97FA990087357C /* Main.storyboard in Resources */,
 				046574FD1A97FA990087357C /* LaunchScreen.xib in Resources */,
 				046574FA1A97FA990087357C /* Images.xcassets in Resources */,
+				0465753A1A9A5E0A0087357C /* launchImage.png in Resources */,
 				046575291A98BC7F0087357C /* PED_NS_DTL_CMP.csv in Resources */,
 				046575161A9800DF0087357C /* PED_NS_DTL_50K.gml in Resources */,
 				0465752B1A98BC7F0087357C /* PED_NS_DTL_SLF.csv in Resources */,
 				0465752C1A98BC7F0087357C /* PED_NS_DTL_SNF.csv in Resources */,
 				0465752A1A98BC7F0087357C /* PED_NS_DTL_50K.csv in Resources */,
+				0465753C1A9A5E880087357C /* launchImage@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,10 +441,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = NovaScotiaFarming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -444,10 +454,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = NovaScotiaFarming/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

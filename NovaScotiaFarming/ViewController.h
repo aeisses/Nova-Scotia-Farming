@@ -12,6 +12,9 @@
 @interface ViewController : UIViewController <MKMapViewDelegate>
 
 @property (nonatomic, strong) IBOutlet NovaScotiaMapView *nsMapView;
+@property (nonatomic, strong) IBOutlet UIView *shader;
+@property (nonatomic, strong) IBOutlet UIActivityIndicatorView *spinner;
+@property (nonatomic, strong) IBOutlet UILabel *infoLabel;
 
 @property (nonatomic, strong) IBOutlet UIButton *BarneyButton;
 @property (nonatomic, strong) IBOutlet UIButton *BrydenButton;

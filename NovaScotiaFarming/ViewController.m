@@ -17,6 +17,10 @@
 @implementation ViewController
 
 @synthesize nsMapView = _nsMapView;
+@synthesize shader = _shader;
+@synthesize spinner = _spinner;
+@synthesize infoLabel = _infoLabel;
+
 @synthesize BarneyButton = _BarneyButton;
 @synthesize BrydenButton = _BrydenButton;
 @synthesize CobequidButton = _CobequidButton;
@@ -47,16 +51,31 @@
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
   _nsMapView.delegate = self;
-  CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
-  MKCoordinateSpan span = MKCoordinateSpanMake(3.527896, 6.861726);
-  [_nsMapView setRegion:MKCoordinateRegionMake(center, span)];
+
   _nsMapView.mapType = MKMapTypeSatellite;
   _nsMapView.context = ((AppDelegate*)[[UIApplication sharedApplication] delegate]).managedObjectContext;
+
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  if ([defaults boolForKey:@"DataLoaded"]) {
+    [_spinner removeFromSuperview];
+    [_shader removeFromSuperview];
+    [_infoLabel removeFromSuperview];
+  } else {
+    [_spinner startAnimating];
+    [_nsMapView setUserInteractionEnabled:NO];
+  }
 }
 
 - (void)didReceiveMemoryWarning {
   [super didReceiveMemoryWarning];
   // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+  [super viewWillAppear:animated];
+  CLLocationCoordinate2D center = CLLocationCoordinate2DMake(45.263357, -63.323368);
+  MKCoordinateSpan span = MKCoordinateSpanMake(3.227896, 6.161726);
+  [_nsMapView setRegion:MKCoordinateRegionMake(center, span)];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -71,6 +90,12 @@
       [dataLoader loadSoilType];
       [defaults setBool:YES forKey:@"DataLoaded"];
       [defaults synchronize];
+      dispatch_async(dispatch_get_main_queue(), ^{
+        [_shader removeFromSuperview];
+        [_spinner removeFromSuperview];
+        [_infoLabel removeFromSuperview];
+        [_nsMapView setUserInteractionEnabled:YES];
+      });
     });
   }
 }

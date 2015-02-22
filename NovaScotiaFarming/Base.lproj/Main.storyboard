@@ -21,8 +21,8 @@
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="tP6-ig-9VR" customClass="NovaScotiaMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </mapView>
-                            <view alpha="0.90000000000000002" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-BK-Upg">
-                                <rect key="frame" x="364" y="5" width="236" height="549"/>
+                            <view alpha="0.90000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0nB-BK-Upg">
+                                <rect key="frame" x="348" y="0.0" width="236" height="549"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="y4P-of-DwT">
                                         <rect key="frame" x="10" y="50" width="105" height="30"/>
@@ -417,16 +417,47 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fzO-9A-8ff">
+                                <rect key="frame" x="0.0" y="-16" width="600" height="616"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="PhV-b0-Gho">
+                                        <rect key="frame" x="282" y="289" width="37" height="37"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data is loading please wait...." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YG8-ot-8Y7">
+                                        <rect key="frame" x="188.5" y="347.5" width="224.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="centerX" secondItem="YG8-ot-8Y7" secondAttribute="centerX" id="1DW-Rw-Jfm"/>
+                                    <constraint firstAttribute="centerY" secondItem="YG8-ot-8Y7" secondAttribute="centerY" constant="-50" id="7pr-AS-PQF"/>
+                                    <constraint firstAttribute="centerY" secondItem="PhV-b0-Gho" secondAttribute="centerY" id="8QI-3x-eDz"/>
+                                    <constraint firstAttribute="centerX" secondItem="PhV-b0-Gho" secondAttribute="centerX" id="lCY-jD-8uw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="fzO-9A-8ff" secondAttribute="trailing" constant="-16" id="5of-yK-Ie5"/>
                             <constraint firstAttribute="trailing" secondItem="tP6-ig-9VR" secondAttribute="trailing" id="6Cl-xo-2cL"/>
+                            <constraint firstItem="fzO-9A-8ff" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-16" id="J1P-M0-dRd"/>
                             <constraint firstItem="tP6-ig-9VR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Jhb-Kd-77Z"/>
+                            <constraint firstItem="fzO-9A-8ff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="T9X-vl-h4U"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0nB-BK-Upg" secondAttribute="trailing" id="Vjg-Tl-ewZ"/>
                             <constraint firstItem="tP6-ig-9VR" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cCA-Nc-WJJ"/>
                             <constraint firstItem="tP6-ig-9VR" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="dWQ-eN-7UR"/>
+                            <constraint firstItem="fzO-9A-8ff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="oeB-xD-BhW"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fzO-9A-8ff" secondAttribute="bottom" id="pwy-dn-DIh"/>
                             <constraint firstItem="0nB-BK-Upg" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="qnf-ls-HNE"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="T9X-vl-h4U"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="BarneyButton" destination="y4P-of-DwT" id="hcM-hg-DEf"/>
@@ -454,11 +485,15 @@
                         <outlet property="WestbrookButton" destination="JFz-88-nYq" id="sxV-gr-W38"/>
                         <outlet property="WoodbourneButton" destination="EPX-1n-SGh" id="fn3-gb-A49"/>
                         <outlet property="WyvernButton" destination="mle-qc-ls7" id="tCl-sf-55A"/>
+                        <outlet property="infoLabel" destination="YG8-ot-8Y7" id="85v-o4-bZn"/>
                         <outlet property="nsMapView" destination="tP6-ig-9VR" id="x8z-d6-l42"/>
+                        <outlet property="shader" destination="fzO-9A-8ff" id="1zl-ff-jsh"/>
+                        <outlet property="spinner" destination="PhV-b0-Gho" id="J0n-6e-Cgd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245" y="187"/>
         </scene>
     </scenes>
 </document>

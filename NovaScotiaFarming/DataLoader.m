@@ -20,6 +20,7 @@ static DataLoader *instance;
 @interface DataLoader()
 @property (nonatomic) BOOL foundGMLTag;
 @property (nonatomic, weak) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) SoilSectionManagedObject *soilSectionManagedObject;
 
 - (CLLocationCoordinate2D)convertWebMercatorToGeographicX:(double)mercX Y:(double)mercY;
 @end
@@ -73,13 +74,13 @@ static DataLoader *instance;
 - (void)loadGMLData {
   NSString *pathToMyFile = [[NSBundle mainBundle] pathForResource:@"PED_NS_DTL_50K" ofType:@"gml"];
   DDFileReader * reader = [[DDFileReader alloc] initWithFilePath:pathToMyFile];
-  __block SoilSectionManagedObject *soilSectionManagedObject;
   
+  __weak DataLoader *wSelf = self;
   [reader enumerateLinesUsingBlock:^(NSString * line, BOOL * stop) {
     @autoreleasepool {
       if ([line hasPrefix:@"<gml:featureMember"] && !_foundGMLTag) {
         _foundGMLTag = YES;
-        soilSectionManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"SoilSection" inManagedObjectContext:_managedObjectContext];
+        wSelf.soilSectionManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"SoilSection" inManagedObjectContext:_managedObjectContext];
         
       } else if ([line hasPrefix:@"</gml:featureMember"] && _foundGMLTag) {
         _foundGMLTag = NO;
@@ -100,7 +101,7 @@ static DataLoader *instance;
                                        withString:@""
                                           options:NSLiteralSearch
                                             range:NSMakeRange(0,[mutableLine length])];
-          soilSectionManagedObject.objectid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
+          wSelf.soilSectionManagedObject.objectid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
   //        NSLog(@"read line: %@", mutableLine);
         } else if ([mutableLine hasPrefix:@"<fme:SOIL_ID>"]) {
           [mutableLine replaceOccurrencesOfString:@"<fme:SOIL_ID>"
@@ -111,7 +112,7 @@ static DataLoader *instance;
                                        withString:@""
                                           options:NSLiteralSearch
                                             range:NSMakeRange(0,[mutableLine length])];
-          soilSectionManagedObject.soilid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
+          wSelf.soilSectionManagedObject.soilid = [NSNumber numberWithInt:(uint16_t)[mutableLine intValue]];
   //        NSLog(@"read line: %@", mutableLine);
         } else if ([mutableLine hasPrefix:@"<fme:MAPUNIT>"]) {
           [mutableLine replaceOccurrencesOfString:@"<fme:MAPUNIT>"
@@ -122,7 +123,7 @@ static DataLoader *instance;
                                        withString:@""
                                           options:NSLiteralSearch
                                             range:NSMakeRange(0,[mutableLine length])];
-          soilSectionManagedObject.mapunit = [mutableLine stringByReplacingOccurrencesOfString:@"/" withString:@""];;
+          wSelf.soilSectionManagedObject.mapunit = [mutableLine stringByReplacingOccurrencesOfString:@"/" withString:@""];
         } else if ([mutableLine hasPrefix:@"<gml:posList>"]) {
           [mutableLine replaceOccurrencesOfString:@"<gml:posList>"
                                        withString:@""
@@ -137,16 +138,21 @@ static DataLoader *instance;
           if ([pointArray count] % 2 != 0) {
             NSLog(@"Error in the number of points in the array");
           } else {
-            NSMutableOrderedSet *shapePoints = [NSMutableOrderedSet new];
-            for (int i=0; i<[pointArray count]; i+=2) {
-              ShapePointManagedObject *shapePoint = (ShapePointManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"ShapePoint" inManagedObjectContext:_managedObjectContext];
-              CLLocationCoordinate2D location = [self convertWebMercatorToGeographicX:[[pointArray objectAtIndex:i] doubleValue] Y:[[pointArray objectAtIndex:i+1] doubleValue]];
-              shapePoint.latitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.latitude];
-              shapePoint.longitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.longitude];
-              shapePoint.soilSection = soilSectionManagedObject;
-              [shapePoints addObject:shapePoint];
-            }
-            soilSectionManagedObject.shapePoints = (NSOrderedSet*)shapePoints;
+//            @try {
+              NSMutableOrderedSet *shapePoints = [NSMutableOrderedSet new];
+              for (int i=0; i<[pointArray count]; i+=2) {
+                ShapePointManagedObject *shapePoint = (ShapePointManagedObject*)[NSEntityDescription insertNewObjectForEntityForName:@"ShapePoint" inManagedObjectContext:_managedObjectContext];
+                CLLocationCoordinate2D location = [self convertWebMercatorToGeographicX:[[pointArray objectAtIndex:i] doubleValue] Y:[[pointArray objectAtIndex:i+1] doubleValue]];
+                shapePoint.latitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.latitude];
+                shapePoint.longitude = (NSDecimalNumber*)[NSDecimalNumber numberWithDouble:location.longitude];
+                shapePoint.soilSection = wSelf.soilSectionManagedObject;
+                [shapePoints addObject:shapePoint];
+              }
+              wSelf.soilSectionManagedObject.shapePoints = (NSOrderedSet*)shapePoints;
+//            }
+//            @catch (NSException * e) {
+//              NSLog(@"Exception: %@", e);
+//            }
           }
         }
       }
